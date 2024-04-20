@@ -31,10 +31,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         console.log(from);
         console.log(msg_body);
       }
-      res.status(200);
+      res.send("got new message");
     } else {
       console.log("No body in payload");
-      res.status(200);
+      res.send("No message in the body");
     }
   }
 }
